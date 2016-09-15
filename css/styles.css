@@ -1,0 +1,851 @@
+/*!
+    @description    Extended Bootstrap styles for [http://fuckyeah-elementaryos.tumblr.com/]
+    @author         Resi Respati <http://resir014.tumblr.com/>
+    @version        1.0
+*/
+
+/** =========================================================================
+    Global Styles
+    ========================================================================= */
+
+/**
+    Non-responsive Bootstrap reset
+
+    Source: http://getbootstrap.com/examples/non-responsive/
+*/
+
+/* Reset the container */
+.container {
+    width: 970px;
+    max-width: none !important;
+}
+
+/* Undo the collapsing navbar */
+.navbar-collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+    visibility: visible !important;
+}
+
+.navbar-toggle {
+  display: none;
+}
+.navbar-collapse {
+  border-top: 0;
+}
+
+.navbar-brand {
+  margin-left: -15px;
+}
+
+/* Always apply the floated nav */
+.navbar-nav {
+    float: left;
+    margin: 0;
+}
+.navbar-nav > li {
+    float: left;
+}
+.navbar-nav > li > a {
+    padding: 15px;
+}
+
+/* Redeclare since we override the float above */
+.navbar-nav.navbar-right {
+    float: right;
+}
+
+/* Undo custom dropdowns */
+.navbar .navbar-nav .open .dropdown-menu {
+  position: absolute;
+  float: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-width: 0 1px 1px;
+  border-radius: 0 0 4px 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #333;
+}
+.navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+.navbar .navbar-nav .open .dropdown-menu > .active > a,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #fff !important;
+  background-color: #428bca !important;
+}
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+  color: #999 !important;
+  background-color: transparent !important;
+}
+
+/* Undo form expansion */
+.navbar-form {
+  float: left;
+  width: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/* Copy-pasted from forms.less since we mixin the .form-inline styles. */
+.navbar-form .form-group {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.navbar-form .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+.navbar-form .form-control-static {
+  display: inline-block;
+}
+
+.navbar-form .input-group {
+  display: inline-table;
+  vertical-align: middle;
+}
+
+.navbar-form .input-group .input-group-addon,
+.navbar-form .input-group .input-group-btn,
+.navbar-form .input-group .form-control {
+  width: auto;
+}
+
+.navbar-form .input-group > .form-control {
+  width: 100%;
+}
+
+.navbar-form .control-label {
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.navbar-form .radio,
+.navbar-form .checkbox {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.navbar-form .radio label,
+.navbar-form .checkbox label {
+  padding-left: 0;
+}
+
+.navbar-form .radio input[type="radio"],
+.navbar-form .checkbox input[type="checkbox"] {
+  position: relative;
+  margin-left: 0;
+}
+
+.navbar-form .has-feedback .form-control-feedback {
+  top: 0;
+}
+
+/**
+    Blog-friendly reset
+*/
+
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #555;
+}
+
+a {
+    color: #005cff;
+    text-decoration: none;
+    -webkit-transition: color .20s;
+    -moz-transition: color .20s;
+    -o-transition: color .20s;
+    transition: color .20s;
+}
+
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: underline;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    margin-top: 0;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+p {
+    margin: 10px 0;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+blockquote {
+    padding: 0 0 0 20px;
+    margin: 10px 0;
+    font-size: 1em;
+    line-height: inherit;
+}
+
+blockquote p {
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.navbar-brand > img {
+  height: 100%;
+}
+
+/** =========================================================================
+    Header
+    ========================================================================= */
+
+header {
+    margin: 2.5em 0;
+}
+
+header h1 {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-weight: 100;
+    font-size: 48px;
+}
+
+header span {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.header-links {
+    text-align: right;
+    margin-top: 40px;
+}
+
+.header-links a,
+.header-links a:hover{
+    color:#333;
+    text-decoration: none;
+}
+
+.header-links ul {
+    margin: 0;
+    padding: 0;
+}
+
+.header-links li {
+    display: inline;
+    padding: 10px 15px;
+    border-right: 1px solid #333;
+    /*margin-right: 12px;*/
+}
+
+.header-links li:last-child {
+    border: 0;
+}
+
+/**
+    Jumbotron
+*/
+
+.jumbotron {
+    background-color: transparent;
+    text-align: center;
+}
+
+.jumbotron-logo > img {
+    display: block;
+    margin: 0 auto;
+}
+
+.jumbotron-tagline {
+    margin-top: 20px;
+}
+
+
+/** =========================================================================
+    Posts
+    ========================================================================= */
+
+/**
+    Base class
+
+    Universal class for Tumblr posts.
+*/
+
+.blog-main {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.post {
+    margin-bottom: 60px;
+    padding: 15px 15px 0 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.post h1,
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6,
+.post .h1,
+.post .h2,
+.post .h3,
+.post .h4,
+.post .h5,
+.post .h6 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Read More container */
+
+.read_more_container {
+    margin-top: 20px;
+}
+
+.read_more_container a {
+    display: inline-block;
+    background: #868686;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.read_more_container a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Terminal inputs */
+
+.post pre {
+    color: #fff;
+    background-color: #333;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .25);
+}
+
+/**
+    Post header
+*/
+
+.post-title {
+    margin-top: 0 !important;
+    margin-bottom: 5px !important;
+    font-size: 40px;
+}
+
+/**
+    Post content
+*/
+
+.post-caption {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/**
+    Text
+
+    Styles specific to Text posts.
+*/
+
+.text > .post-caption img {
+    /*margin: 20px 0;*/
+    width: 100%;
+}
+
+/**
+    Photo
+
+    Styles specific to Photo posts.
+*/
+
+.photo figure {
+    position: relative;
+    margin-bottom: 1.5em;
+}
+
+.photo figure img {
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+/**
+    Photoset
+
+    Styles specific to Photoset posts.
+*/
+
+.photoset-container {
+    width: 100%;
+}
+
+.photoset-container .row {
+    margin: 0;
+}
+
+/**
+    Quote
+
+    Styles specific to Quote posts.
+*/
+
+.quote .post-header {
+    margin-bottom: 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.quote .post-header p {
+    margin: 0 0 1em;
+}
+
+.quote .post-header p:last-child {
+    margin: 0;
+}
+
+.quote .short {
+    font-size: 32px;
+}
+
+.quote .long {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.quote .cite {
+    margin-top: 1em;
+}
+
+/**
+    Link
+
+    Styles specific to Link posts.
+*/
+
+.post-header-link {
+    margin-bottom: 20px;
+}
+
+.post-header-link h2 a {
+    border-radius: 3px;
+    background-color: #005cff;
+    color: #fff;
+    display: block;
+    padding: 17px 30px 18px;
+    position: relative;
+    word-break: break-word;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.post-header-link h2 a:hover,
+.post-header-link h2 a:active {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    background-image: -ms-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+}
+
+.post-header-link .link-title {
+    display: inline-block;
+    line-height: 38px;
+}
+
+.post-header-link .link-host {
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0.5em 0 0;
+    opacity: 0.7;
+}
+
+/**
+    Audio
+
+    Styles specific to Audio posts.
+*/
+
+.audio-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.tumblr_audio_player {
+    width: 100%;
+}
+
+.soundcloud_audio_player {
+    width: 100%;
+}
+
+.spotify_audio_player{
+    /* Height is adjusted with JS */
+    width: 100%;
+}
+
+/**
+    Video
+
+    Styles specific to Video posts.
+*/
+
+.video-wrapper {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.video-wrapper iframe,
+.video-wrapper object,
+.video-wrapper embed,
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/**
+    Answer
+
+    Styles specific to Answer posts.
+*/
+
+/* Base classes */
+.note-item {
+    margin-bottom: 20px;
+    border-radius: 3px;
+    background-color: #f5f5f5;
+    padding: 10px 15px;
+}
+
+.note-item-avatar {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.note-item-inner {
+    margin: 10px 0
+}
+
+.note-item-user {
+    color: #808080;
+    font-size: 80%;
+}
+
+/**
+    Post Notes
+
+    Tumblr, please don't screw this up.
+*/
+
+.post-notes {
+    border-radius: 4px;
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+}
+
+.post-notes ol.notes {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.post-notes .notes li {
+    padding: 5px;
+}
+
+.post-notes .notes li:nth-child(even) {
+    border: 1px dotted #ccc;
+    border-left: none;
+    border-right: none;
+}
+
+.post-notes .notes li:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.post-notes .notes img {
+    margin: 5px;
+}
+
+/**
+    Post Footer
+*/
+
+.post-footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px dotted #ccc;
+}
+
+/**
+    Post Tags
+*/
+
+.post-tags {
+    font-size: 85%;
+}
+
+.post-tags ul {
+    margin: 10px 0;
+    padding-left: 0;
+}
+
+.post-tags li {
+    display: inline;
+    /*margin-right: 12px;*/
+}
+
+.post-tags li:first-child {
+    float: none;
+    margin-right: 5px;
+}
+
+.post-tags a,
+.post-tags a:hover {
+    font-weight: normal;
+    color: #999;
+}
+
+.post-tags li:first-child {
+    color: #333;
+}
+.post-tags li:first-child a {
+    color: #333;
+}
+.post-tags li:first-child i {
+    opacity: 1;
+}
+
+.post-tags li.tag-label {
+    color: #999;
+}
+
+.post-tags li.label {
+    color: #999;
+    border: 1px solid #999;
+}
+
+/**
+    Post Meta
+*/
+
+.post-meta {
+    color: #999;
+    font-size: 85%;
+}
+
+.post-meta a {
+    color: #999;
+}
+
+.post-meta a:hover {
+    text-decoration: none;
+}
+
+.post-meta ul {
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+.post-meta ul li {
+    display: inline;
+    margin-right: 1em;
+}
+
+.post-meta ul li:last-child {
+    margin-right: 0;
+}
+
+/* Attribution */
+.post-meta ul.attribution {
+    margin: 0;
+    text-align: left;
+}
+
+/* Info */
+.post-info {
+    text-align: right;
+    vertical-align: middle;
+}
+
+/* Comments */
+#disqus_thread {
+    margin: 2em 0;
+}
+
+/** =========================================================================
+    Pagination, Sidebar and Footer
+    ========================================================================= */
+
+/**
+    Pagination
+
+    Overrides Bootstrap's default pagination style.
+*/
+
+.pagination {
+    margin: 0;
+}
+
+.pagination > li > a, .pagination > li > span {
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* Pagination */
+.pager {
+    margin-bottom: 60px;
+    text-align: left;
+}
+.pager > li > a {
+    width: 140px;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+/* Temporary workaround to force center pagination */
+.pagination-centered {
+    text-align: center;
+}
+
+/**
+    Sidebar
+*/
+
+.sidebar-module {
+    padding: 15px;
+    margin: 0 -15px 15px;
+}
+
+.sidebar-module-inset {
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+}
+
+.sidebar-links {
+    margin: 10px 0;
+}
+
+.sidebar-divider {
+    border-top: 1px solid #ccc;
+}
+
+/* Download button */
+.download-button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/**
+    Footer
+
+    The footer (duh).
+*/
+
+footer {
+    margin-top: 40px;
+    background-color: #333;
+    color: #fff;
+    font-size: 85%;
+}
+
+footer .container {
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer p {
+    margin: 0 0 1em;
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+}
+
+footer h4 {
+    margin-top: 0;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 13px;
+}
+
+.footer-infobox {
+    padding-left: 58px;
+    background: url("https://googledrive.com/host/0B6Vc4fGuZyi8OWlwTlhxLXRUa0k/img/footer-logo.png") no-repeat;
+}

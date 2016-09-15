@@ -1,0 +1,424 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{Title}{block:PostSummary} | {PostSummary}{/block:PostSummary}</title>
+  <meta name="description" content="{MetaDescription}" />
+  <meta name="google-site-verification" content="dJkInrfHu-kt2XXL2bQoGgCZPI_qH8sZIkdacocLIlU" />
+
+  <!-- Tumblr icon -->
+  <link rel="shortcut icon" href="{Favicon}" />
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/resir014/tumblr-fyeos/master/css/styles.css"
+  />
+  <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/resir014/tumblr-fyeos/master/css/pxu-photoset.css"
+  />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,300,400" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic"
+  />
+
+  <!-- Still use IE8 or below? You poor poor thing. -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!--a class="navbar-brand" href="/">
+          <img src="https://raw.githubusercontent.com/resir014/tumblr-fyeos/img/footer-logo.png" />
+        </a-->
+      </div>
+      <div class="collapse navbar-collapse" id="collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/">home</a></li>
+          <li><a href="/about">about</a></li>
+          <li><a href="/tags">contents</a></li>
+          <li><a href="/ask">ask</a></li>
+          <li><a href="/archive">archive</a></li>
+          <li><a href="{RSS}">RSS</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- /.navbar -->
+
+  <header class="jumbotron">
+    <div class="container">
+      <a class="jumbotron-logo" href="/"><img src="https://raw.githubusercontent.com/resir014/tumblr-fyeos/img/fyeos_logo.png" /></a>
+      <p class="jumbotron-tagline">{Description}</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+
+      <main id="main" role="main" class="col-xs-8 blog-main">
+
+        {block:Posts}
+        <article class="post{block:Text} text{/block:Text}{block:Photoset} photoset{/block:Photoset}{block:Panorama} panorama{/block:Panorama}{block:Photo} photo{/block:Photo}{block:Quote} quote{/block:Quote}{block:Link} link{/block:Link}{block:Chat} chat{/block:Chat}{block:Audio} audio{/block:Audio}{block:Video} video{/block:Video}{block:Answer} answer{/block:Answer}">
+
+          {block:Text} {block:Title}
+          <div class="post-header">
+            <h1 class="post-title">{Title}</h1>
+          </div>
+          {/block:Title}
+
+          <div class="post-caption">
+            {Body}
+          </div>
+          {/block:Text} {block:Photo}
+          <figure class="post-header">
+            {LinkOpenTag}<img src="{PhotoURL-1280}" alt="{PhotoAlt}" />{LinkCloseTag} {block:Caption}
+            <figcaption class="post-caption">
+              {Caption}
+            </figcaption>
+            {/block:Caption}
+          </figure>
+          {/block:Photo} {block:Photoset}
+          <figure class="photoset-container">
+            <div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">
+
+              {block:Photos}
+              <div class="photo-data">
+                <div class="pxu-photo">
+                  <img alt="{PhotoAlt}" src="{PhotoURL-500}" width="{PhotoWidth-500}" height="{PhotoHeight-500}" data-highres="{PhotoURL-HighRes}"
+                    data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" class="{block:Exif}exif-yes {/block:Exif}{block:Caption}caption-yes{/block:Caption}"
+                    {block:Exif}data-camera="{block:Camera}{Camera}{/block:Camera}" data-iso="{block:ISO}{ISO}{/block:ISO}"
+                    data-aperture="{block:Aperture}{Aperture}{/block:Aperture}" data-exposure="{block:Exposure}{Exposure}{/block:Exposure}"
+                    data-focal="{block:FocalLength}{FocalLength}{/block:FocalLength}" {/block:Exif} {block:Caption}data-caption="{Caption}"
+                    {/block:Caption} />
+                </div>
+                <div class="icons">
+                  <a class="tumblr-box" rel="post-{PostID}" href="{PhotoURL-HighRes}">
+                    <span class="zoom">Zoom</span>
+                  </a>
+                  <span class="info">Info</span>
+                </div>
+              </div>
+              {/block:Photos}
+
+            </div>
+            <!-- close SLIDESHOW -->
+
+            {block:Caption}
+            <figcaption class="post-caption">
+              {Caption}
+            </figcaption>
+            {/block:Caption}
+          </figure>
+          {/block:Photoset} {block:Panorama}
+          <figure class="post-header">
+            {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag} {block:Caption}
+            <figcaption class="post-caption">
+              {Caption}
+            </figcaption>
+            {/block:Caption}
+          </figure>
+          {/block:Panorama} {block:Quote}
+          <div class="post-header">
+            <span class="{Length}">{Quote}</span>
+          </div>
+
+          <div class="cite">
+            {block:Source}&mdash; {Source}{/block:Source}
+          </div>
+          {/block:Quote} {block:Link}
+          <div class="post-header post-header-link">
+            <h2>
+              <a href="{URL}" {Target}>
+                <span class="link-title">{Name} &raquo;</span> {block:Host}
+                <span class="link-host">{Host}</span> {/block:Host}
+              </a>
+            </h2>
+          </div>
+
+          <div class="post-caption">
+            {block:Description}{Description}{/block:Description}
+          </div>
+          {/block:Link} {block:Chat} {block:Title}
+          <div class="post-header">
+            <h1 class="post-title">{Title}</h1>
+          </div>
+          {/block:Title}
+
+          <div class="post-caption">
+            {block:Lines}
+            <p class="{Alt}">{block:Label}<span><strong>{Label}</strong></span> {/block:Label}{Line}</p>
+            {/block:Lines}
+          </div>
+          {/block:Chat} {block:Audio}
+          <div class="audio-container">
+            {block:AudioEmbed} {AudioEmbed color="white"} {/block:AudioEmbed}
+          </div>
+
+          <div class="post-caption">
+            {block:Caption}{Caption}{/block:Caption}
+          </div>
+          {/block:Audio} {block:Video}
+          <div class="video-wrapper">
+            {Video-700}
+          </div>
+
+          <div class="post-caption">
+            {block:Caption}{Caption}{/block:Caption}
+          </div>
+          {/block:Video} {block:Answer}
+          <div class="post-header">
+            <div class="note-item note-item-question">
+              <img class="note-item-avatar pull-right" src="{AskerPortraitURL-48}" />
+              <p class="note-item-user">{Asker} asked:</p>
+              <div class="note-item-inner">
+                <p>{Question}</p>
+              </div>
+            </div>
+
+            {block:Answerer}
+            <div class="note-item note-item-answered">
+              <img class="note-item-avatar pull-right" src="{AnswererPortraitURL-48}" />
+              <p class="note-item-user">{Answerer} answered:</p>
+              <div class="note-item-inner">
+                {Answer}
+              </div>
+            </div>
+            {/block:Answerer}
+          </div>
+
+          <div class="post-caption">
+            {Replies}
+          </div>
+          {/block:Answer} {block:Date} {block:HasTags}
+
+          <div class="post-tags">
+            <ul>
+              <li class="tag-label"><i class="fa fa-user"></i> Posted by:</li>
+              <li><a href="{PostAuthorURL}" target="_blank">{PostAuthorName}</a></li>
+            </ul>
+            <ul>
+              <li class="tag-label"><i class="fa fa-tag"></i> Tags:</li>
+              {block:Tags}
+              <li><a class="btn btn-default btn-xs" href="{TagURL}">#{Tag}</a></li>
+              {/block:Tags}
+            </ul>
+          </div>{/block:HasTags}
+
+          <div class="post-footer">
+
+            <div class="post-meta">
+              <div class="row">
+                <div class="col-xs-6">
+                  <ul class="attribution">
+                    {block:RebloggedFrom}
+                    <li><a href="{ReblogParentURL}"><i class="fa fa-retweet"></i> {ReblogParentName}</a></li>{/block:RebloggedFrom}
+                    {block:ContentSource}
+                    <li><a href="{SourceURL}">{lang:Source}: {SourceTitle}</a></li>{/block:ContentSource}
+                  </ul>
+                </div>
+                <div class="col-xs-6">
+                  <ul class="post-info">
+                    <li><a href="{Permalink}">{TimeAgo}</a></li>
+                    {block:NoteCount}
+                    <li><a href="{Permalink}#notes">{NoteCountWithLabel}</a></li>{/block:NoteCount} {block:IndexPage}
+                    <li>
+                      <a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
+                      <script type="text/javascript">
+                        var disqus_shortname = 'fuckyeah-elementaryos';
+
+                        (function () {
+                          var s = document.createElement('script'); s.async = true;
+                          s.type = 'text/javascript';
+                          s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+                        }());
+                      </script>
+                    </li>
+                    {/block:IndexPage} {/block:IfDisqusShortname}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/block:Date}
+        </article>
+        <!-- /.post -->
+
+        {block:PermalinkPage} {block:PostNotes}
+        <div class="post-notes">
+          {PostNotes}
+        </div>
+        {/block:PostNotes} {block:Date}
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//fuckyeah-elementaryos.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>        {/block:Date} {/block:PermalinkPage} {/block:Posts} {block:Pagination}
+
+        <!-- Pagination
+                    ================================================== -->
+        <ul class="pager">
+          {block:NextPage}
+          <li class="previous"><a href="{NextPage}">Older posts</a></li>
+          {/block:NextPage} {block:PreviousPage}
+          <li class="next"><a href="{PreviousPage}">Newer posts</a></li>
+          {/block:PreviousPage}
+        </ul>
+        {/block:Pagination} {block:PermalinkPagination}
+
+        <!-- Pagination
+                    ================================================== -->
+        <ul class="pager">
+          {block:PreviousPost}
+          <li class="previous"><a href="{PreviousPost}">Previous</a></li>
+          {/block:PreviousPost} {block:NextPost}
+          <li class="next"><a href="{NextPost}">Next</a></li>
+          {/block:NextPost}
+        </ul>{/block:PermalinkPagination}
+
+      </main>
+      <!-- /.blog-main -->
+
+      <aside id="sidebar" role="sidebar" class="col-xs-3 col-xs-offset-1 blog-sidebar">
+        <div class="sidebar-module sidebar-module-inset">
+          <h4>About elementary.</h4>
+          <p>elementary OS is a Linux distribution, based on Ubuntu, famous with its own unique style and design.</p>
+          <p>It includes the beautiful Pantheon desktop environment, and a number of in-house apps, that aims to set the standard
+            for good design &amp; user experience in an operating system.</p>
+          <p>Whether you're a Linux newbie or a seasoned Linux veteran, elementary OS is the perfect choice for you.</p>
+        </div>
+
+        <div class="sidebar-module">
+          <h4>Get elementary.</h4>
+          <p>elementary OS is completely free. You can install it on as many computers as you'd like or even copy it and give
+            it away to your friends. Feel free to donate some cash to the developers, but that's not required.</p>
+          <p>To download elementary OS, click the link below.</p>
+          <p>
+            <a class="btn btn-default btn-block" href="https://elementary.io/" target="_blank">Download</a>
+          </p>
+        </div>
+
+        <div class="sidebar-module">
+          <h4>Help build elementary.</h4>
+          <p>You can also contribute on the development process of elementary. The following link contains everything that you
+            will need to get started.</p>
+          <p>There's also a Bountysource page, where you can help fix bugs in elementary and get paid for it.</p>
+          <p>Sounds interesting? <a href="https://www.bountysource.com/teams/elementary/bounties" target="_blank">Click here.</a></p>
+
+          <p>
+            <a class="btn btn-default btn-block" href="https://elementary.io/get-involved" target="_blank">Get Involved</a>
+          </p>
+
+        </div>
+
+        <div class="sidebar-module">
+          <h4>More links.</h4>
+          <ol class="list-unstyled">
+            <li><a href="https://elementary.io/">Official Website</a></li>
+            <li><a href="https://twitter.com/elementary">@elementary on Twitter</a></li>
+            <li><a href="https://squareup.com/market/elementary-llc">Store</a></li>
+          </ol>
+        </div>
+      </aside>
+      <!-- /.blog-sidebar -->
+
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+
+  <footer class="blog-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="footer-infobox">
+            <p><a href="https://elementary.io/" target="_blank">elementary OS</a> &copy; elementary LLC. We are unaffiliated
+              by them in any way.</p>
+            <p>Except otherwise noted, contents are licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"
+                target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+            <p>Theme designed by <a href="https://resir014.github.io/" target="_blank">resir014</a> using <a href="http://getbootstrap.com/"
+                target="_blank">Bootstrap</a>.</p>
+            <p>Powered by <a href="https://www.tumblr.com/" target="_blank">Tumblr</a>.</p>
+          </div>
+        </div>
+        <!-- /.col-xs-6 -->
+        <div class="col-xs-2">
+          <h4>blog</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/tags">Contents</a></li>
+            <li><a href="/ask">Ask a Question</a></li>
+            <li><a href="/archive">Archive</a></li>
+            <li><a href="{RSS}" target="_blank">RSS</a></li>
+            <li><a href="https://plus.google.com/106394464623530102816" rel="publisher">Google+</a></li>
+          </ul>
+        </div>
+        <!-- /.col-xs-2 -->
+        <div class="col-xs-2">
+          <h4>elementary</h4>
+          <ul>
+            <li><a href="https://elementary.io/" target="_blank">Official Website</a></li>
+            <li><a href="https://blog.elementary.io/" target="_blank">Blog</a></li>
+            <li><a href="https://elementary.io/support" target="_blank">Support</a></li>
+            <li><a href="https://elementary.io/store" target="_blank">Store</a></li>
+          </ul>
+        </div>
+        <!-- /.col-xs-2 -->
+        <div class="col-xs-2">
+          <h4>connect</h4>
+          <ul>
+            <li><a href="https://facebook.com/elementaryos" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com/elementary" target="_blank">Twitter</a></li>
+            <li><a href="https://plus.google.com/114635553671833442612" target="_blank">Google+</a></li>
+            <li><a href="https://plus.google.com/communities/104613975513761463450" target="_blank">G+ Community</a></li>
+            <li><a href="https://elementary.io/developer" target="_blank">Developer Page</a></li>
+            <li><a href="https://elementary.io/get-involved" target="_blank">Get Involved</a></li>
+          </ul>
+        </div>
+        <!-- /.col-xs-2 -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://raw.githubusercontent.com/resir014/tumblr-fyeos/js/pxuPhotoset.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.photo-slideshow').pxuPhotoset({
+        // options go here
+        'rounded'   : 'false',
+      }, function() {
+        // callback
+      });
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{Title}</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+
+        <!-- Custom styles -->
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:100,300,400" />
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic|Source+Code+Pro:400" />
+
+        <!-- Still use IE8 or below? You poor poor thing. -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script src="assets/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">home</a></li>
+                        <li><a href="/about">about</a></li>
+                        <li><a href="/archive">archive</a></li>
+                        <li><a href="{RSS}">RSS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>  <!-- /.navbar -->
+
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <!--div class="thing">
+                            <img src="img/logo_128.png" />
+                        </div>
+                        <span class="subtitle">
+                            fuck yeah,
+                        </span>
+                        <h1>elementary OS</h1-->
+                        <img src="img/fyeos_logo.png" />
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="header-links">
+                            <div class="btn-group">
+                                <a class="btn btn-default" href="/">home</a>
+                                <a class="btn btn-default" href="/about">about</a>
+                                <a class="btn btn-default" href="/archive">archive</a>
+                                <a class="btn btn-default" href="{RSS}">RSS</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix visible-xs"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="row">
+
+                <div id="main" role="main" class="col-xs-8 blog-main">
+
+                    <!-- Text post
+                    ================================================== -->
+                    <article class="post text">
+
+                        <div class="post-header">
+                            <h2 class="post-title">An example post</h2>
+                        </div>
+
+                        <div class="post-caption">
+                            <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.</p>
+                            <h3>Pork drumstick turkey</h3>
+                            <p>Boudin aliqua adipisicing rump corned beef. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
+                            <pre>$ sudo add-apt-repository ppa:libreoffice/ppa<br />$ sudo apt-get update<br />$ sudo apt-get install libreoffice</pre>
+                            <img src="http://24.media.tumblr.com/8d83ea45d3520414f4c1f5b2f60a4076/tumblr_mgn87lH9lP1r6uubdo1_1280.png" />
+                            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
+                            <blockquote>But I must explain to you how all this mistaken idea of denouncing of a pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</blockquote>
+                            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
+
+                        </div>
+
+                        <div class="post-tags">
+                            <ul>
+                            <li class="tag-label"><i class="fa fa-tag"></i> Tags:</li>
+                                <li><a class="btn btn-default btn-xs" href="http://whattheminecraft.tumblr.com/tagged/minecraft">#minecraft</a></li>
+                                <li><a class="btn btn-default btn-xs" href="http://whattheminecraft.tumblr.com/tagged/gaming">#gaming</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="post-footer">
+                            <div class="post-meta">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <ul class="attribution">
+                                            <li><a href="http://whattheminecraft.tumblr.com/"><i class="fa fa-retweet"></i> whattheminecraft</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <ul class="info">
+                                            <li><a href="#">1 week ago</a></li>
+                                            <li><a href="#notes">65 notes</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article> <!-- /.post -->
+
+                    <!-- Photo post
+                    ================================================== -->
+                    <article class="post photo">
+
+                        <figure class="post-header">
+                            <img src="http://24.media.tumblr.com/e2e11773215d0faf0e7acfc00c37095d/tumblr_mew2a6zuwq1rlbfswo1_1280.png" />
+                        </figure>
+
+                        <figcaption class="post-caption">
+                            <p><a class="tumblr_blog" href="http://minecraftphotographer.tumblr.com/post/38015956981/wizcraftgaming-i-recognize-this-from-the-hunger">minecraftphotographer</a>:</p>
+                            <blockquote>
+                            <div>
+                            <p><a class="tumblr_blog" href="http://wizcraftgaming.tumblr.com/post/37804612845/i-recognize-this-from-the-hunger-games-server-i">wizcraftgaming</a>:</p>
+                            <blockquote>
+                            <div>
+                            <p>I recognize this from the Hunger Games Server I used to play on.</p><p> Lovely and mysterious oversight of the nearby village and the lake only adds to the central thought of sadness.</p>
+                            </div>
+                            </blockquote>
+                            <p>Ah! It is the server! I donated to it, so I&rsquo;m on it A LOT (although I am the worst). If you ever get on it, I&rsquo;m CrayolaDerpy. :)</p>
+                            </div>
+                            </blockquote>
+                            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
+                            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
+
+
+
+                        </figcaption>
+
+                        <div class="post-tags">
+                            <ul class="tags">
+                            <li class="tag-label"><i class="fa fa-tag"></i> Tags:</li>
+                                <li><a class="btn btn-default btn-xs" href="http://whattheminecraft.tumblr.com/tagged/minecraft">#minecraft</a></li>
+                                <li><a class="btn btn-default btn-xs" href="http://whattheminecraft.tumblr.com/tagged/gaming">#gaming</a></li>
+                                <li><a class="btn btn-default btn-xs" href="http://whattheminecraft.tumblr.com/tagged/screenshot">#screenshot</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="post-footer">
+
+                            <div class="post-meta">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <ul class="attribution">
+                                            <li><a href="http://whattheminecraft.tumblr.com/post/38948565378"><i class="fa fa-retweet"></i> whattheminecraft</a></li>
+                                            <li><a href="http://minecraftphotographer.tumblr.com/post/37742195273">Source: minecraftphotographer</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <ul class="post-info">
+                                            <li><a href="#">1 week ago</a></li>
+                                            <li><a href="#notes">65 notes</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article> <!-- /.post -->
+
+                    <!-- Photoset post
+                    ================================================== -->
+                    <!-- Fuck this, I'll do it later. -->
+
+                    <!-- Quote post
+                    ================================================== -->
+                    <article class="post quote">
+
+                        <div class="post-header">
+                            <span class="short">HTML is the best thing since sliced bread.</span>
+                        </div>
+
+                        <div class="post-caption">
+                            <p class="cite">&mdash; Anonymous</p>
+                        </div>
+
+                        <div class="post-tags">
+                            <ul class="tags">
+                            <li class="tag-label"><i class="fa fa-tag"></i> Tags:</li>
+                                <li><a class="btn btn-default btn-xs" href="http://whattheminecraft.tumblr.com/tagged/quote">#quote</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="post-footer">
+
+                            <div class="post-meta">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <ul class="attribution">
+                                            <li>//attribution goes here</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <ul class="info">
+                                            <li><a href="#">1 week ago</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article> <!-- /.post -->
+
+                    <!-- Link post
+                    ================================================== -->
+                    <article class="post link">
+
+                        <div class="post-header post-header-link">
+                            <h2>
+                                <a href="https://www.youtube.com/watch?v=QSR5bPDNER0" target="_blank">
+                                    <span class="link-title">{Name}</span>
+                                    <span class="link-host">{Host}</span>
+                                </a>
+                            </h2>
+                        </div>
+
+                        <div class="post-caption">
+                            <p>It's freaking awesome.</p>
+                        </div>
+
+                        <div class="post-tags">
+                            <ul class="tags">
+                            <li class="tag-label"><i class="fa fa-tag"></i> Tags:</li>
+                                <li><a class="btn btn-default btn-xs" href="#">#tags</a></li>
+                                <li><a class="btn btn-default btn-xs" href="#">#go</a></li>
+                                <li><a class="btn btn-default btn-xs" href="#">#here</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="post-footer">
+                            <div class="post-meta">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <ul class="attribution">
+                                            <li>//attribution goes here</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <ul class="info">
+                                            <li><a href="#">1 week ago</a></li>
+                                            <li><a href="#notes">11 notes</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article> <!-- /.post -->
+
+                    <!-- Chat post
+                    ================================================== -->
+                    <article class="post chat">
+
+                        <div class="post-header">
+                            <h2 class="post-title">Health and hygiene before modern times</h2>
+                        </div>
+
+                        <div class="post-caption">
+                            <p class="odd"><span><strong>Europe:</strong></span> Why the fuck are we always getting sick? Is it demons? Is it ghosts? Is it a curse?</p>
+                            <p class="even"><span><strong>Rest of the World:</strong></span> Have you tried washing your ass?</p>
+                        </div>
+
+                        <!--div class="post-tags">
+                            <ul class="tags">
+                            <li class="tag-label"><i class="fa fa-tag"></i> Tags:</li>
+                                <li><a class="btn btn-default btn-xs" href="#">#tags</a></li>
+                                <li><a class="btn btn-default btn-xs" href="#">#go</a></li>
+                                <li><a class="btn btn-default btn-xs" href="#">#here</a></li>
+                            </ul>
+                        </div-->
+
+                        <div class="post-footer">
+                            <div class="post-meta">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <ul class="attribution">
+                                            <li>//attribution goes here</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <ul class="info">
+                                            <li>//post info goes here</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article> <!-- /.post -->
+
+                    <!-- Audio post
+                    ================================================== -->
+                    <!-- Fuck this, I'll do it later. -->
+
+                    <!-- Video post
+                    ================================================== -->
+                    <article class="post video">
+
+                        <div class="video-wrapper">
+                            <iframe width="700" height="393" src="http://www.youtube.com/embed/QSR5bPDNER0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="post-caption">
+                            <p><a class="tumblr_blog" href="http://blog.thedailyblock.co.nz/post/40903047091">thedailyblock</a>:</p>
+                            <blockquote>
+                            <p><em>Submitted by <a href="http://resir014.tumblr.com/">Resi</a> :)</em></p>
+                            </blockquote>
+                        </div>
+
+                        <div class="post-tags">
+                            <ul class="tags">
+                            <li class="tag-label"><i class="fa fa-tag"></i> Tags:</li>
+                                <li><a class="btn btn-default btn-xs" href="#">#tags</a></li>
+                                <li><a class="btn btn-default btn-xs" href="#">#go</a></li>
+                                <li><a class="btn btn-default btn-xs" href="#">#here</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="post-footer">
+                            <div class="post-meta">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <ul class="attribution">
+                                            <li><a href="http://blog.thedailyblock.co.nz/post/40903047091"><i class="fa fa-retweet"></i> thedailyblock</a></li>
+                                            <li><a href="http://blog.thedailyblock.co.nz/post/40903047091">Source: thedailyblock</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <ul class="postmeta">
+                                            <li>//post info goes here</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article> <!-- /.post -->
+
+                    <!-- Answer post
+                    ================================================== -->
+                    <article class="post answer">
+
+                        <div class="post-header">
+                            <div class="note-item question">
+                                <div class="avatar">
+                                    <img class="pull-right" src="http://whattheminecraft.tumblr.com/images/anonymous_avatar_48.gif" />
+                                </div>
+                                <p class="asker">Anonymous asked:</p>
+                                <div class="answer-inner">
+                                    <p>what is minecraft?</p>
+                                </div>
+                            </div>
+
+                            <div class="note-item answered">
+                                <div class="avatar">
+                                    <img class="pull-right" src="http://whattheminecraft.tumblr.com/images/anonymous_avatar_48.gif" />
+                                </div>
+                                <p class="answerer">thedailyblock answered:</p>
+                                <div class="answer-inner">
+                                    <p>what</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post-caption">
+                            <p>Winner!</p>
+                        </div>
+
+                        <div class="post-footer">
+                            <div class="post-tags">
+                                <ul class="tags">
+                                <li class="tag-label"><i class="fa fa-tag"></i> Tags:</li>
+                                    <li><a class="btn btn-default btn-xs" href="#">#tags</a></li>
+                                    <li><a class="btn btn-default btn-xs" href="#">#go</a></li>
+                                    <li><a class="btn btn-default btn-xs" href="#">#here</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="post-meta">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <ul class="attribution">
+                                            <li>//attribution goes here</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <ul class="info">
+                                            <li>//post info goes here</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article> <!-- /.post -->
+
+                    <!-- Pagination
+                    ================================================== -->
+                    <div class="pagination-centered">
+                        <ul class="pagination">
+                            <li class="disabled"><a href="#">&laquo;</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">&raquo;</a></li>
+                        </ul>
+                    </div>
+
+                    <ul class="pager">
+                        <li><a href="#">Previous</a></li>
+                        <li><a href="#">Next</a></li>
+                    </ul>
+
+                </div> <!-- /.blog-main -->
+
+                <div id="sidebar" role="sidebar" class="col-xs-3 col-xs-offset-1 blog-sidebar">
+                    <div class="sidebar-module sidebar-module-inset">
+                        <h4>This is Bootstrap.</h4>
+                        <p>Whoa there, world!</p>
+                    </div>
+
+                    <hr class="sidebar-divider" />
+
+                    <h4>Get elementary.</h4>
+
+                    <p>elementary OS is completely free. You can install it on as many computers as you'd like or even copy it and give it away to your friends. Feel free to donate some cash to the developers, but that's not required.</p>
+                    <p>To download elementary OS, click the link below.</p>
+                    <p><a class="btn btn-default btn-lg btn-block" href="http://elementaryos.org" target="_blank">Download</a></p>
+
+                    <hr class="sidebar-divider" />
+
+                    <h4>Help build elementary.</h4>
+
+                    <p>There's currently a Bountysource page up for elementary OS projects, where you can help fix bugs in eOS and get paid for it.</p>
+                    <p>Sounds interesting?</p>
+                    <p><a class="btn btn-default btn-lg btn-block" href="http://elementaryos.org" target="_blank">Visit Bountysource page</a></p>
+
+                    <hr class="sidebar-divider" />
+
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="#">Official Website</a></li>
+                        <li><a href="#">@elementary on Twitter</a></li>
+                        <li><a href="#">Store</a></li>
+                    </ul>
+                </div> <!-- /.blog-sidebar -->
+
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="footer-infobox">
+                            <p><a href="http://elementaryos.org/">elementary OS</a> &copy; elementary LLC. We are unaffiliated by them in any way.</p>
+                            <p>Except otherwise noted, contents are licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+                            <p>Theme designed by <a href="http://resir014.tumblr.com/">resir014</a> using <a href="http://getbootstrap.com/">Bootstrap</a>.</p>
+                        </div>
+                    </div> <!-- /.col-xs-6 -->
+                    <div class="col-xs-2">
+                        <h4>blog</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contents</a></li>
+                            <li><a href="#">Ask a Question</a></li>
+                            <li><a href="#">Archive</a></li>
+                            <li><a href="#">RSS</a></li>
+                        </ul>
+                    </div> <!-- /.col-xs-2 -->
+                    <div class="col-xs-2">
+                        <h4>elementary</h4>
+                        <ul>
+                            <li><a href="#">Official Website</a></li>
+                            <li><a href="#">Journal</a></li>
+                            <li><a href="#">Store</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Google+</a></li>
+                        </ul>
+                    </div> <!-- /.col-xs-2 -->
+                    <div class="col-xs-2">
+                        <h4>connect</h4>
+                        <ul>
+                            <li><a href="#">Developer Page</a></li>
+                            <li><a href="#">G+ Community</a></li>
+                            <li><a href="#">Get Involved</a></li>
+                        </ul>
+                    </div> <!-- /.col-xs-2 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </footer>
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
